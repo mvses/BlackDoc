@@ -8,7 +8,7 @@ title:            whereis mo
 tagline:          3D designer and Programmer 
 description:      "My website is centered around art, programming, and anything inbetween"
 url:              #https://github.com/karloespiritu/blackdoc
-baseurl:          /
+baseurl:          /home/
                   # the optional subpath of your site, e.g. "/my-jekyll-site/"
                   # This will apply to all pages in your Jekyll site.
 
