@@ -26,14 +26,20 @@ ______ _            _   ______
  *
  * Update the foundational and global aspects of the page.
  */
- @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700');
+ /**
+ Moses Eribo ---
+ Import Google fonts
+ **/
+ /**@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700');**/
+ @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:400,700,800');
 html {
   /**font-family: "PT Sans", Helvetica, Arial, sans-serif;**/
-  font-family:'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inconsolata', monospace;
 }
 
 body {
-  color: #444;
+  color: #000;
   background-color: #fff;
   
 }
@@ -45,8 +51,8 @@ h4,
 h5,
 h6 {
   /**font-family: 'EB Garamond', serif;**/
-  font-family:'Roboto', sans-serif;
-  color: #444;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
 }
 
 h1 a,
@@ -56,7 +62,7 @@ h4 a,
 h5 a,
 h6 a {
   /**font-family: 'EB Garamond', serif;**/
-  font-family:'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #50585d;
   font-kerning: auto;
   font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh";
@@ -67,6 +73,7 @@ Moses Eribo
 Title styling
 **/
 .sidebar h1{
+
   border:#444 0px solid;
   padding:1rem 1rem;
   opacity: 1 !important;
@@ -77,13 +84,24 @@ Title styling
 
 a {
   color: #ffeb99;
-  transition: color ease 0.3s;
+  transition: color ease 0.0s;
 }
 
 a:hover {
   color: #caad00;
 }
-
+/**
+Moses Eribo ---
+heading hover
+**/
+.post h1 a:hover {
+  color: #fff !important;
+  background: #000 !important;
+}
+.read-more:hover{
+  color: #000 !important;
+  background:#ffde25;
+}
 .btn {
   display: inline-block;
   padding: .25rem 1rem;
@@ -151,26 +169,32 @@ social links and icons
 .social-links{
   display: flex;
   flex-direction: row-reverse;
-  align-items: flex-end;
-  height: 5rem;
+  align-items: center;
+  height: 1rem;
   padding:2rem 1rem;
+  
 }
 .social-links img{
   width:1.5rem;
   opacity: 0.6;
   margin-left:30px;
   transition:all 0.6s;
+  
+}
+.social-links a{
+  background:none!important;
 }
 
 a:hover > img{
   opacity:1;
+
 }
 /**
 ---
 **/
 /* Pagination items can be `span`s or `a`s */
 .pagination-item {
-  border: 0px solid #444;
+  font-family: 'Montserrat', sans-serif;
   color: #444;
   font-family: 'Roboto', sans-serif;
   font-weight:bold;
@@ -198,8 +222,36 @@ a:hover > img{
 .posts h1{
   font-size:3rem;
 }
+.highlight{
+  background: #fff;
+  border:#000 solid 1px;
+  
+}
 .highlight, .highlighter-rouge, pre{
-  border-radius:10px;
+  border-radius:1px;
+  
+}
+.post img{
+  border-radius:0px;
+}
+.post p a{
+  border:#ffde25 1px solid;
+}
+.post p a:hover,a:focus{
+  background:#ffde25;
+}
+/**
+Moses Eribo---
+Archive
+**/
+.page .archive{
+  font-size:1.5rem;  
+}
+.page .archive .date{
+  font-size:0.8rem;  
+}
+.page .archive a:hover, a:focus{
+  color:#ffde25;
 }
 /*
  * Messages
@@ -260,14 +312,14 @@ a:hover > img{
 
 /* Sidebar links */
 .sidebar a {
-  color: #444;
+  color: #000;
 }
 
 /* About section */
 .sidebar-about h1 {
-  color: #444;
+  color: #000;
   margin-top: 0;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.25rem;
 }
 .sidebar-about p{
@@ -288,12 +340,18 @@ a:hover > img{
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: underline;
+  color:#fff;
 }
 .sidebar-nav-item.active {
   font-weight: bold;
 }
 
+/**
+Moses Eribo
+**/
+.copyright{
+  background: #ffde25;
+}
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
@@ -310,7 +368,7 @@ a.sidebar-nav-item:focus {
   }
 }
 .sidebar-sticky {
-  height:85%;
+  height:80%;
 }
 
 /**
@@ -338,6 +396,13 @@ Moses Eribo --
   .posts,.page {
     max-width: 100%;
   }
+  .social-links{
+    justify-content: space-around;
+  }
+  .copyright{
+    font-size:0.8rem;
+  }
+
 }
 /**--**/
 @media (min-width: 48em) {
@@ -368,6 +433,7 @@ Moses Eribo --
 .post-title a {
   color: #000;
 }
+
 
 /*
  * Reverse layout
@@ -497,4 +563,11 @@ Moses Eribo --
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #7d7d7d;
+}
+
+::selection {
+  background: #ffde25; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffde25; /* Gecko Browsers */
 }
